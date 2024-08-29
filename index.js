@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 var serveIndex = require('serve-index');
 
-const port = 3000;
+const port = 1337;
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
