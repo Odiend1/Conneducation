@@ -25,7 +25,7 @@
     var usernameInput = document.getElementById('username');
     submitButton.onclick = function(){
         if(usernameInput.value.trim() !== "" && document.getElementById('password').value.trim() !== ""){
-            window.location.href = "./students?user=me"
+            window.location.href = "/students?user=" + usernameInput.value
         }
     }
   </script>

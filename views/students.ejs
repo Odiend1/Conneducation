@@ -14,8 +14,8 @@
 </head>
 <body>
   <form id="uploadForm" enctype="multipart/form-data">
-    <label for="userId">User ID:</label>
-    <input type="text" id="userId" name="userId" required><br><br>
+    <label for="userId" style="display: none">User ID:</label>
+    <input type="text" id="userId" name="userId" style="display:none"><br><br>
     
     <label for="file">Choose file:</label>
     <input type="file" id="file" name="file" required><br><br>
@@ -23,11 +23,14 @@
     <button type="submit">Upload</button>
   </form>
   <script>
+
+    if(window.location.href.slice(window.location.href.indexOf("?")+1).includes("://")) window.location.href = "/student-login/"
     const form = document.getElementById('uploadForm');
-    
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-
+      document.getElementById("userId").value = window.location.href.slice(window.location.href.indexOf("?")+1);
+      document.getElementById("userId").value = document.getElementById("userId").value.slice(document.getElementById("userId").value.indexOf("=")+1)
       const formData = new FormData(form);
 
       try {
