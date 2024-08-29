@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .post{
+      border: 1px solid black;
+      margin: 10%;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <label>Username</label><br>
+  <input id="username">
+  <br><br>
+  <label>Password</label><br>
+  <input type="password" id="password">
+  <br><br>
+  <button id="submit">Submit</button>
+  <script>
+    var submitButton = document.getElementById('submit');
+    var usernameInput = document.getElementById('username');
+    submitButton.onclick = function(){
+        if(usernameInput.value.trim() !== "" && document.getElementById('password').value.trim() !== ""){
+            window.location.href = "./students?user=me"
+        }
+    }
+  </script>
+</body>
+</html>
