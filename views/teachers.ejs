@@ -40,12 +40,12 @@
           var postContainer = document.createElement('div');
           postContainer.classList.add('post');
           var documentName = document.createElement('h3');
-          documentName.innerHTML = post;
+          documentName.innerHTML = post.slice(post.indexOf("-")+1).slice(post.slice(post.indexOf("-")+1).indexOf("-")+1);
           postContainer.appendChild(documentName);
           var downloadLink = document.createElement('a');
           downloadLink.innerHTML = "Download";
           downloadLink.download = post;
-          downloadLink.href = "posts/" + post;
+          downloadLink.href = "posts/" + post.slice(post.indexOf("-")+1);
           postContainer.append(downloadLink);
           postsContainer.appendChild(postContainer);
         })

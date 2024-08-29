@@ -81,6 +81,7 @@ app.get('/get-posts', async (req, res) => {
       await Promise.all(userIds.map(async (id) => {
           var userPosts = await db.get(id + 'data.posts');
           if (userPosts) {
+              console.log("filename: "+userPosts)
               posts = posts.concat(userPosts);
           }
       }));
