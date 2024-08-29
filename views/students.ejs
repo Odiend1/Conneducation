@@ -9,11 +9,35 @@
       border: 1px solid black;
       margin: 10%;
     }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    h1, h2, h3, h4, h5, h6, label, input, p{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+    }
+
+    #uploadForm{
+        background-color: mintcream;
+        position: relative;
+        margin: 8%;
+        padding: 4%;
+        border-radius: 20px;
+    }
   </style>
   <title>Document</title>
 </head>
 <body>
   <form id="uploadForm" enctype="multipart/form-data">
+    <p>Upload your work for review!</p>
     <label for="userId" style="display: none">User ID:</label>
     <input type="text" id="userId" name="userId" style="display:none"><br><br>
     

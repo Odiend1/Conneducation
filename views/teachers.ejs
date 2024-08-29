@@ -5,10 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .post{
-      border: 1px solid black;
-      margin: 10%;
-      padding: 2%;
+    html, body {
+        height: 100%;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    #posts-container {
+        margin: 5%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 2%;
+        background-color: mintcream;
+        border-radius: 12px;
+        height: 80%;
+        overflow-y: scroll;
+    }
+
+    .post {
+        border: 1px solid black;
+        padding: 2%;
+        border-radius: 12px;
+        margin-bottom: 5%;
+        background-color: white;
+    }
+
+    h1{
+        margin-left: 5%;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: Arial, Helvetica, sans-serif;
     }
   </style>
   <title>Document</title>
@@ -23,6 +50,7 @@
     
     <button type="submit">Upload</button>
   </form>
+  <h1>Student Submissions</h1>
   <div id="posts-container"></div>
   <script>
     const form = document.getElementById('uploadForm');

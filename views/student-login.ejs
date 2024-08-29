@@ -5,14 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .post{
-      border: 1px solid black;
-      margin: 10%;
+    html, body {
+        height: 100%;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    h1, h2, h3, h4, h5, h6, label{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login-container{
+        text-align: center;
+        margin: auto;
+        padding: auto;
+        background-color: mintcream;
+        width: 80%;
+        border-radius: 20px;
     }
   </style>
   <title>Document</title>
 </head>
 <body>
+  <div id="login-container">
+  <div style="text-align:left; width: 150px; position: relative; margin: 0 auto; padding: 10%;">
   <label>Username</label><br>
   <input id="username">
   <br><br>
@@ -20,6 +36,8 @@
   <input type="password" id="password">
   <br><br>
   <button id="submit">Submit</button>
+  </div>
+  </div>
   <script>
     var submitButton = document.getElementById('submit');
     var usernameInput = document.getElementById('username');

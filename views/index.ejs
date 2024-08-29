@@ -5,18 +5,73 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .post{
-      border: 1px solid black;
-      margin: 10%;
+    html, body {
+        height: 100%;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #title-container{
+      opacity: 0.9;
+      text-align: center;
+      width: 80%;
+      background-color: mintcream;
+      margin: auto;
+      border-radius: 5vw+5vh;
+    }
+
+    #main-title{
+      font-size: 4em;
+      margin-bottom: 0;
+    }
+
+    #subtitle{
+      margin-top: 0;
+    }
+
+    #main-container{
+      background-image: url("conneducation_background_photo_blur_crop.jpeg");
+      background-size: 105%;
+      margin: 5%;
+      min-height: 67.5%;
+      padding-top: 12.5%;
+      border-radius: 5vw+5vh;
+      text-align: center;
+    }
+
+    .login-button{
+      font-family: 'Courier New', Courier, monospace;
+      padding: 1%;
+      font-size: 1em;
+      margin: 1%;
+      border-radius: 8px;
+    }
+
+    #students-button{
+      background-color: #63a0f0;
+    }
+
+    #teachers-button{
+      background-color: #74ca5c;
     }
   </style>
   <title>Document</title>
 </head>
 <body>
-  <button onclick="window.location.href='/student-login'">Student Login</button>
-  <button onclick="window.location.href='/teachers'">Teacher Dashboard</button>
-  </form>
-  <div id="posts-container"></div>
+  <div id="main-container">
+  <div id="title-container">
+    <h1 id="main-title">Conneducation</h1>
+    <h2 id="subtitle">Education Solutions</h2>
+    <button onclick="window.location.href='/student-login'" class="login-button" id="students-button"><b>STUDENTS</b></button>
+    <button onclick="window.location.href='/teachers'" class="login-button" id="teachers-button"><b>TEACHERS</b></button>
+  </div>
+  </div>
+  
+  
   <script>
   </script>
 </body>
